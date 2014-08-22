@@ -1,0 +1,75 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mongoduinometeor</title>
+</head>
+
+<body>
+<!-- "container-fluid" is possible-->
+<div class="container">
+    {{> hello}}
+    {{> toggleLEDButton}}
+    {{> nunchuck}}
+    {{> accelorometer}}
+    {{> joystick}}
+    {{> accelorometerStreamGraphs}}
+</div>
+</body>
+
+<template name="hello">
+    <h1>Hello XXX Usergroup!</h1>
+    {{greeting}}
+</template>
+
+<template name="toggleLEDButton">
+    <h1>{{showToggleText}}
+        <button class="btn btn-primary btn-lg" type="button">LED Switch</button>
+        <!--You may use button classes with <a>, <button>, or <input> element.
+        But it is recommended that you use it with <button> elements mostly to avoid cross browser inconsistency issues.-->
+        <!--<input class="btn btn-default" type="button"  value="LED Switch"/>-->
+    </h1>
+</template>
+
+<template name="nunchuck">
+    <h1>MeteorDuino DataLogger</h1>
+    {{#each nunchuckButtons}}
+    <h1>Nunchuck Buttons</h1>
+    <h2>
+        <div>{{targetButton}}</div>
+        <div>{{buttonState}}</div>
+    </h2>
+    {{/each}}
+</template>
+
+<template name="accelorometer">
+    <h1>Accelorometer</h1>
+    {{#each accelorometers}}
+    <div>{{value}}</div>
+    <div>{{axis}}</div>
+    {{/each}}
+</template>
+
+<template name="joystick">
+    <h1>Joystick</h1>
+    {{#each joysticks}}
+    <div>{{value}}</div>
+    <div>{{axis}}</div>
+    <div>{{direction}}</div>
+    {{/each}}
+</template>
+
+<!--Mehrere Daten Sollen Angezeigt werden als Liste-->
+<template name="accelorometerStreamGraphs">
+    <h1>Accelorometer Stream graph</h1>
+    <!--{{#each accelorometers}}-->
+    {{> accelorometerStreamGraph}}
+    <!--{{/each}}-->
+</template>
+
+<template name="accelorometerStreamGraph">
+    {{#each accelorometers}}
+    <li>
+    <div>{{value}}</div>
+    <div>{{axis}}</div>
+        </li>
+    {{/each}}
+</template>
