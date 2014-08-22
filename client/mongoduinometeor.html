@@ -11,7 +11,7 @@
     {{> nunchuck}}
     {{> accelorometer}}
     {{> joystick}}
-    {{> accelorometerStreamGraphs}}
+    {{> accelorometerStreamGraph}}
 </div>
 </body>
 
@@ -58,18 +58,9 @@
 </template>
 
 <!--Mehrere Daten Sollen Angezeigt werden als Liste-->
-<template name="accelorometerStreamGraphs">
+<template name="accelorometerStreamGraph">
     <h1>Accelorometer Stream graph</h1>
-    <!--{{#each accelorometers}}-->
-    {{> accelorometerStreamGraph}}
-    <!--{{/each}}-->
+    <div id="accelorometerGraph"></div>
 </template>
 
-<template name="accelorometerStreamGraph">
-    {{#each accelorometers}}
-    <li>
-    <div>{{value}}</div>
-    <div>{{axis}}</div>
-        </li>
-    {{/each}}
-</template>
+

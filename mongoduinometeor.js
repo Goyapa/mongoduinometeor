@@ -30,9 +30,25 @@ if (Meteor.isClient) {
             Meteor.call('toggleLED');
         }
     });
-    Template.accelorometerStreamGraph.accelorometers = function () {
-        return accelerometerData.find();
-//            find({}, {limit: 20, sort: {created: -1}});
+    Template.accelorometerStreamGraph.rendered = function () {
+        console.log('accelorometerStreamGraph rendered')
+        $('#accelorometerGraph').epoch({
+            type: 'time.area',
+            data: [
+                {
+                    label: 'x',
+                    values: [{time: 1370044800, y: 100}]
+                },
+                {
+                    label: 'y',
+                    values: [{time: 1370044800, y: 78}]
+                },
+                {
+                    label: 'z',
+                    values: [{time: 1370044801, y: 98}]
+                }
+            ]
+        });
     };
 }
 
