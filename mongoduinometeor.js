@@ -44,12 +44,12 @@ if (Meteor.isClient) {
             queueSize: 1
         });
 
-        var xAxisCursor = accelerometerData.find({axis: 'x'})
+        var xAxisCursor = joystickData.find({axis: 'x'})
         xAxisCursor.observe({
           added: function (document) {
             var data = {
               time: (document.created.getTime() / 1000)|0,
-              y: document.value
+              y: document.value * document.direction
             }
             xGraph.push([data])
           }
@@ -68,38 +68,15 @@ if (Meteor.isClient) {
           queueSize: 1
         });
 
-        var yAxisCursor = accelerometerData.find({axis: 'y'})
+        var yAxisCursor = joystickData.find({axis: 'y'})
         yAxisCursor.observe({
           added: function (document) {
             var data = {
               time: (document.created.getTime() / 1000)|0,
-              y: document.value
+              y: document.value * document.direction
             }
+            console.log(data)
             yGraph.push([data])
-          }
-        })
-
-        var zGraph = $('#accelorometerGraphZ').epoch({
-          type: 'time.area',
-          data: [
-            {
-              label: 'z',
-              values: [{time: 0, y: 0}]
-            }
-          ],
-          axes: ['left', 'bottom', 'right'],
-          historySize: 1,
-          queueSize: 1
-        });
-
-        var zAxisCursor = accelerometerData.find({axis: 'z'})
-        zAxisCursor.observe({
-          added: function (document) {
-            var data = {
-              time: (document.created.getTime() / 1000)|0,
-              y: document.value
-            }
-            zGraph.push([data])
           }
         })
     };
