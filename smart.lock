@@ -5,7 +5,8 @@
       "npm": {},
       "packmeteor": {},
       "less-bootstrap-3": {},
-      "font-awesome-4-less": {}
+      "font-awesome-4-less": {},
+      "bower": {}
     },
     "packages": {
       "npm": {
@@ -27,6 +28,11 @@
         "git": "https://github.com/svub/fontawesome4-less.git",
         "tag": "v4.4.0",
         "commit": "250d2336a217c18eb70e9d074784a7db3ca38472"
+      },
+      "bower": {
+        "git": "https://github.com/mquandalle/meteor-bower.git",
+        "tag": "v0.1.10",
+        "commit": "ba0081a9f2919918f48f6b2f9e2f33729c79aecc"
       }
     }
   }

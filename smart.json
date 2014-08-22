@@ -3,6 +3,11 @@
     "npm": {},
     "packmeteor": {},
     "less-bootstrap-3": {},
-    "font-awesome-4-less": {}
+    "font-awesome-4-less": {},
+    "bower": {}
+  },
+  "bower": {
+    "d3": "3.4.11",
+    "epoch": "0.6.0"
   }
 }
