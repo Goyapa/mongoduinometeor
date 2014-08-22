@@ -31,24 +31,77 @@ if (Meteor.isClient) {
         }
     });
     Template.accelorometerStreamGraph.rendered = function () {
-        console.log('accelorometerStreamGraph rendered')
-        $('#accelorometerGraph').epoch({
+        var xGraph = $('#accelorometerGraphX').epoch({
             type: 'time.area',
             data: [
                 {
                     label: 'x',
-                    values: [{time: 1370044800, y: 100}]
-                },
-                {
-                    label: 'y',
-                    values: [{time: 1370044800, y: 78}]
-                },
-                {
-                    label: 'z',
-                    values: [{time: 1370044801, y: 98}]
+                    values: [{time: 0, y: 0}]
                 }
-            ]
+            ],
+            axes: ['left', 'bottom', 'right'],
+            historySize: 1,
+            queueSize: 1
         });
+
+        var xAxisCursor = accelerometerData.find({axis: 'x'})
+        xAxisCursor.observe({
+          added: function (document) {
+            var data = {
+              time: (document.created.getTime() / 1000)|0,
+              y: document.value
+            }
+            xGraph.push([data])
+          }
+        })
+
+        var yGraph = $('#accelorometerGraphY').epoch({
+          type: 'time.area',
+          data: [
+            {
+              label: 'y',
+              values: [{time: 0, y: 0}]
+            }
+          ],
+          axes: ['left', 'bottom', 'right'],
+          historySize: 1,
+          queueSize: 1
+        });
+
+        var yAxisCursor = accelerometerData.find({axis: 'y'})
+        yAxisCursor.observe({
+          added: function (document) {
+            var data = {
+              time: (document.created.getTime() / 1000)|0,
+              y: document.value
+            }
+            yGraph.push([data])
+          }
+        })
+
+        var zGraph = $('#accelorometerGraphZ').epoch({
+          type: 'time.area',
+          data: [
+            {
+              label: 'z',
+              values: [{time: 0, y: 0}]
+            }
+          ],
+          axes: ['left', 'bottom', 'right'],
+          historySize: 1,
+          queueSize: 1
+        });
+
+        var zAxisCursor = accelerometerData.find({axis: 'z'})
+        zAxisCursor.observe({
+          added: function (document) {
+            var data = {
+              time: (document.created.getTime() / 1000)|0,
+              y: document.value
+            }
+            zGraph.push([data])
+          }
+        })
     };
 }
 
