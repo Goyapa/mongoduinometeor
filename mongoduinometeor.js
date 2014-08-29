@@ -8,7 +8,7 @@ if (Meteor.isClient) {
     Template.nunchuck.nunchuckButtons = function () {
         return nunchuckData.find({}, {limit: 1, sort: {created: -1}});
     };
-    Template.accelorometer.accelorometers = function () {
+    Template.accelerometer.accelerometers = function () {
         return accelerometerData.find({}, {limit: 1, sort: {created: -1}});
     };
     Template.joystick.joysticks = function () {
@@ -30,8 +30,8 @@ if (Meteor.isClient) {
             Meteor.call('toggleLED');
         }
     });
-    Template.accelorometerStreamGraph.rendered = function () {
-        var xGraph = $('#accelorometerGraphX').epoch({
+    Template.accelerometerStreamGraph.rendered = function () {
+        var xGraph = $('#accelerometerGraphX').epoch({
             type: 'time.area',
             data: [
                 {
@@ -55,7 +55,7 @@ if (Meteor.isClient) {
           }
         })
 
-        var yGraph = $('#accelorometerGraphY').epoch({
+        var yGraph = $('#accelerometerGraphY').epoch({
           type: 'time.area',
           data: [
             {

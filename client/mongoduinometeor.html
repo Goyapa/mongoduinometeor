@@ -9,9 +9,9 @@
     {{> hello}}
     {{> toggleLEDButton}}
     {{> nunchuck}}
-    {{> accelorometer}}
+    {{> accelerometer}}
     {{> joystick}}
-    {{> accelorometerStreamGraph}}
+    {{> accelerometerStreamGraph}}
 </div>
 </body>
 
@@ -40,9 +40,9 @@
     {{/each}}
 </template>
 
-<template name="accelorometer">
-    <h1>Accelorometer</h1>
-    {{#each accelorometers}}
+<template name="accelerometer">
+    <h1>accelerometer</h1>
+    {{#each accelerometers}}
     <div>{{value}}</div>
     <div>{{axis}}</div>
     {{/each}}
@@ -58,12 +58,12 @@
 </template>
 
 <!--Mehrere Daten Sollen Angezeigt werden als Liste-->
-<template name="accelorometerStreamGraph">
-    <h1>Accelorometer Stream graph</h1>
+<template name="accelerometerStreamGraph">
+    <h1>Accelerometer Stream graph</h1>
     <h2>X-Achse</h2>
-    <div id="accelorometerGraphX" class="epoch" style="height: 200px"></div>
+    <div id="accelerometerGraphX" class="epoch" style="height: 200px"></div>
     <h2>Y-Achse</h2>
-    <div id="accelorometerGraphY" class="epoch" style="height: 200px"></div>
+    <div id="accelerometerGraphY" class="epoch" style="height: 200px"></div>
 </template>
 
 
