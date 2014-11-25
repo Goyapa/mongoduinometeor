@@ -6,7 +6,7 @@
 <body>
 <!-- "container-fluid" is possible-->
 <div class="container">
-    {{> hello}}
+   <h3>{{> hello}}</h3>
     {{> toggleLEDButton}}
     {{> nunchuck}}
     {{> accelerometer}}
@@ -16,13 +16,13 @@
 </body>
 
 <template name="hello">
-    <h1>Hello XXX Usergroup!</h1>
+    <h1>Hello meteor usergroup!</h1>
     {{greeting}}
 </template>
 
 <template name="toggleLEDButton">
     <h1>{{showToggleText}}
-        <button class="btn btn-primary btn-lg" type="button">LED Switch</button>
+        <button class="btn btn-primary btn-lg" type="button">LED switch</button>
         <!--You may use button classes with <a>, <button>, or <input> element.
         But it is recommended that you use it with <button> elements mostly to avoid cross browser inconsistency issues.-->
         <!--<input class="btn btn-default" type="button"  value="LED Switch"/>-->
@@ -30,7 +30,7 @@
 </template>
 
 <template name="nunchuck">
-    <h1>MeteorDuino DataLogger</h1>
+    <h1>MeteorDuino dataLogger</h1>
     {{#each nunchuckButtons}}
     <h1>Nunchuck Buttons</h1>
     <h2>
@@ -41,7 +41,7 @@
 </template>
 
 <template name="accelerometer">
-    <h1>accelerometer</h1>
+    <h1>Accelerometer</h1>
     {{#each accelerometers}}
     <div>{{value}}</div>
     <div>{{axis}}</div>
@@ -59,11 +59,9 @@
 
 <!--Mehrere Daten Sollen Angezeigt werden als Liste-->
 <template name="accelerometerStreamGraph">
-    <h1>Accelerometer Stream graph</h1>
+    <h1>Joystick streamgraph</h1>
     <h2>X-Achse</h2>
     <div id="accelerometerGraphX" class="epoch" style="height: 200px"></div>
     <h2>Y-Achse</h2>
     <div id="accelerometerGraphY" class="epoch" style="height: 200px"></div>
 </template>
-
-

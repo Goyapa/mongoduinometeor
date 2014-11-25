@@ -15,7 +15,7 @@ if (Meteor.isClient) {
         return joystickData.find({}, {limit: 1, sort: {created: -1}});
     };
     Template.hello.greeting = function () {
-        return "Hello Meteor lovers";
+        return "Congratulation to 1.0";
     };
     Template.toggleLEDButton.showToggleText = function () {
         return "Toggle LED";
@@ -44,16 +44,16 @@ if (Meteor.isClient) {
             queueSize: 1
         });
 
-        var xAxisCursor = joystickData.find({axis: 'x'})
+        var xAxisCursor = joystickData.find({axis: 'x'});
         xAxisCursor.observe({
           added: function (document) {
             var data = {
               time: (document.created.getTime() / 1000)|0,
               y: document.value * document.direction
-            }
+            };
             xGraph.push([data])
           }
-        })
+        });
 
         var yGraph = $('#accelerometerGraphY').epoch({
           type: 'time.area',
@@ -68,22 +68,22 @@ if (Meteor.isClient) {
           queueSize: 1
         });
 
-        var yAxisCursor = joystickData.find({axis: 'y'})
+        var yAxisCursor = joystickData.find({axis: 'y'});
         yAxisCursor.observe({
           added: function (document) {
             var data = {
               time: (document.created.getTime() / 1000)|0,
               y: document.value * document.direction
-            }
-            console.log(data)
+            };
+            console.log(data);
             yGraph.push([data])
           }
         })
     };
 }
 
-if (Meteor.isServer) {
-    Meteor.startup(function () {
-        // code to run on server at startup
-    });
-}
+//if (Meteor.isServer) {
+//    Meteor.startup(function () {
+//        // code to run on server at startup
+//    });
+//}

@@ -12,4 +12,3 @@ Meteor.publish('accelerometerData', function(){
 Meteor.publish('joystickData', function(){
     return joystickData.find({}, {limit: 1, sort: {created: -1}});
 });
-

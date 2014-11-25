@@ -8,7 +8,9 @@ insecure
 npm
 packmeteor
 less
-less-bootstrap-3
-font-awesome-4-less
-d3
 bower
+manuelschoebel:less-bootstrap-3
+mrt:font-awesome-4-less
+pfafman:epoch
+sergeyt:d3
+

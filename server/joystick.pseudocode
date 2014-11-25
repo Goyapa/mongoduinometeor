@@ -1,5 +1,0 @@
-if (db.ledToggle.find(value: 0){
-    db.joystickData.update({$set: { value : 1 }});
-} else {
-    db.collection.update({$set: {value : 0 }});
-}
