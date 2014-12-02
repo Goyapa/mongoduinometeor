@@ -1,0 +1,8 @@
+Last working release before 1.0
+meteor --version
+Release 0.8.3
+
+"less-bootstrap-3": {},
+    "font-awesome-4-less": {},
+
+    #accelerometerGraphX

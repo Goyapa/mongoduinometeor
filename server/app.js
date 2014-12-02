@@ -13,8 +13,8 @@ board.on('error', function (error) {
 
 board.on("ready", Meteor.bindEnvironment(function() {
 
-    new five.Pin("A2").low();
-    new five.Pin("A3").low();
+    new five.Pin("A4").low();
+    new five.Pin("A5").low();
 
     // Create a new `nunchuk` hardware instance.
     nunchuk = new five.Wii.Nunchuk({
@@ -62,7 +62,7 @@ board.on("ready", Meteor.bindEnvironment(function() {
     //
     nunchuk.accelerometer.on("change", Meteor.bindEnvironment(function(err, event) {
         console.log(
-                "accelerometer " + event.axis,
+            "accelerometer " + event.axis,
             event.target[event.axis],
             event.axis, event.direction
         );
@@ -126,7 +126,7 @@ board.on("ready", Meteor.bindEnvironment(function() {
 
     // Create a standard `led` hardware instance
     led = new five.Led({
-        pin: 13
+        pin: 12
     });
 
     // "on" turns the led _on_

@@ -5,12 +5,12 @@
 
 standard-app-packages
 insecure
-npm
-packmeteor
+meteorhacks:npm
 less
-bower
-manuelschoebel:less-bootstrap-3
+mizzao:bootstrap-3
 mrt:font-awesome-4-less
 pfafman:epoch
 sergeyt:d3
 
+
+npm-container
