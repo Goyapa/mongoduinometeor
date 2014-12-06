@@ -12,6 +12,9 @@ board.on('error', function (error) {
 });
 
 board.on("ready", Meteor.bindEnvironment(function() {
+// Connect the Nunchuck with a adapter to the Arduino Board.
+// From the Adapter pin out "+" to "5V" and "-" to "GND".
+// Pin out "d" (data) to "A4" and "c" (clock) to "A5".
 
     new five.Pin("A4").low();
     new five.Pin("A5").low();

@@ -27,3 +27,22 @@ This project is based on
 
     - [d3.js] (https://github.com/mbostock/d3) is a JavaScript library for manipulating documents based on data.
 
+#### Hardware installation:
+
+[Wire your Wii Nunchuck] (http://lizarum.com/assignments/physical_computing/2008/wii_nunchuck.html)
+ with a adapter to a breadboard and the Arduino.
+ LED attached to Pin 12.
+
+
+#### Software installation:
+
+You need to have installed Git and Node.js.
+
+``` bash
+$ curl https://install.meteor.com | /bin/sh
+
+$ git clone https://github.com/Goyapa/mongoduinometeor.git && cd mongoduinometeor
+
+$ meteor
+```
+
