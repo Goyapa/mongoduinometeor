@@ -10,7 +10,7 @@ check@1.0.2
 ctl-helper@1.0.4
 ctl@1.0.2
 d3@1.0.0
-ddp@1.0.11
+ddp@1.0.12
 deps@1.0.5
 ejson@1.0.4
 fastclick@1.0.1
@@ -35,7 +35,7 @@ minifiers@1.1.2
 minimongo@1.0.5
 mizzao:bootstrap-3@3.3.1
 mobile-status-bar@1.0.1
-mongo@1.0.8
+mongo@1.0.9
 mrt:font-awesome-4-less@4.4.0
 npm-container@1.0.0
 observe-sequence@1.0.3
