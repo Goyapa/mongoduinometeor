@@ -1,7 +1,7 @@
 /*
 /* Created by michael on 23.07.14.
 */
-var five = Meteor.require("johnny-five"),
+var five = Meteor.npmRequire("johnny-five"),
     board, nunchuk;
 
 Meteor.startup(function(){
