@@ -1,9 +1,9 @@
 mongoduinometeor
 ================
 
-# Realtime Meteor App connected with Arduino plus Wii Nunchuck.
+# Real-time Meteor App connected with Arduino plus Wii Nunchuck.
 
-This is a project where i try to figure out how Meteors realtime synchronization feature help with handling and viewing Sensor data. Figure out how it fits to the "Internet of Things" IoT. And how the sensor Data stored in MongoDB can be used for data analysis and visualisation.
+This is a project where i try to figure out how Meteors real-time synchronization feature help with handling and viewing Sensor data. Figure out how it fits to the "Internet of Things" IoT. And how the sensor Data stored in MongoDB can be used for data analysis and visualization.
 
 This project is based on 
 
