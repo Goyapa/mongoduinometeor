@@ -46,3 +46,6 @@ $ git clone https://github.com/Goyapa/mongoduinometeor.git && cd mongoduinometeo
 $ meteor
 ```
 
+### Todos
+Setting up Arduino Yun
+Install DDP client
