@@ -29,7 +29,7 @@ This project is based on
 
 #### Hardware installation:
 
-[Wire your Wii Nunchuck] (http://lizarum.com/assignments/physical_computing/2008/wii_nunchuck.html)
+[Wire up your Wii Nunchuck] (http://lizarum.com/assignments/physical_computing/2008/wii_nunchuck.html)
  with a adapter to a breadboard and the Arduino.
  LED attached to Pin 12.
 
@@ -47,5 +47,5 @@ $ meteor
 ```
 
 ### Todos
-Setting up Arduino Yun
-Install DDP client
+Setting up Arduino Yun and
+install DDP client
