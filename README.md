@@ -53,3 +53,10 @@ $ meteor
 ### Todos
 Setting up Arduino Yun and
 install DDP client
+
+### Update
+After i had invested a lot of time figuring out how to get started Node.js on ArduioYun, and failed miserably.
+(There was an [issiu with Yun](https://github.com/rwaldron/johnny-five/issues/465) at that time, don't know if it is actually fixed.)
+
+
+### I decided to set up a new Project named [connected-galaxy](https://github.com/Goyapa/connected-galaxy) with an RaspberryPi, Docker container and Meteor 1.3
